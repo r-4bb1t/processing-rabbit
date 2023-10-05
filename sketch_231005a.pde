@@ -2,6 +2,7 @@ PFont font;
 PImage rabbit; 
 float rabbitX, rabbitY; 
 float speedY = 2;
+int size = 30;
 
 void setup() {
   size(400, 200);
@@ -28,5 +29,10 @@ void draw() {
   }
     
   fill(0); // 검은색으로 설정
+  textSize(size);
+  size += size / 30;
+  if (size > 56) {
+    size = 30;
+  }
   text("안녕 나 토끼", width / 2, height / 2);
 }
